@@ -270,12 +270,22 @@ const InsideCont = styled.div`
     margin-left: 26px;
     margin-right: 26px;
     @media only screen and (min-width: 1440px) {
-        flex-direction: row;
+        flex-direction: unset;
+        flex-wrap:wrap;
+        width:500px;
+        gap: 40px;
+        margin-top: 119px;
+        margin-left: 64px;
 }
 
 @media only screen and (min-width: 768px) {
-    flex-direction: row;
-
+    flex-direction: unset;
+        flex-wrap:wrap;
+        
+        gap: 60px;
+        margin-top: 119px;
+        margin-left: 64px;
+        justify-content: center;
 }
     
 `
@@ -286,10 +296,31 @@ letter-spacing: 2px;
 text-transform: uppercase;
 color: ${StylesTheme.colors.graishBlack};
 font-weight: ${StylesTheme.fontWeigths.mediumWeigth};
+
+@media only screen and (min-width: 1440px) {
+    font-size: 15px;
+line-height: 28px;
+}
+
+@media only screen and (min-width: 768px) {
+    font-size: 13px;
+line-height: 28px;
+}
+
 `
 const CurrentBoldStyles = styled.b`
     font-size: 20px;
 line-height: 24px;
 font-weight: ${StylesTheme.fontWeigths.mediumWeigth};
 color: ${StylesTheme.colors.graishBlack};
+
+@media only screen and (min-width: 1440px) {
+    font-size: 56px;
+line-height: 68px;
+}
+
+@media only screen and (min-width: 768px) {
+    font-size: 40px;
+line-height: 48px;
+}
 `
