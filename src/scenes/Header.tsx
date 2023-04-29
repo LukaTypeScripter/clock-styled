@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { StylesTheme } from "../components/styled";
 import axios from "axios";
 
-const API_URL = "https://api.quotable.io/random";
+
 
 
 
@@ -55,6 +55,18 @@ export default function Header() {
 const HeaderCont = styled.header`
   padding-top: 32px;
   margin-left: 26px;
+  @media only screen and (min-width: 768px) {
+    margin-left: 64px;
+
+}
+
+@media only screen and (min-width: 1440px) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 56px;
+  margin-left:165px;
+}
 `;
 const Abouts = styled.p`
   width: 290px;
@@ -62,11 +74,18 @@ const Abouts = styled.p`
   font-size: 12px;
   line-height: 22px;
   color: ${StylesTheme.colors.white};
+  @media only screen and (min-width: 768px) {
+    width:540px;
+    font-size: 18px;
+line-height: 28px;
+
+}
 `;
-const RefreshImg = styled.div``;
+
 const Flex = styled.div`
   display: flex;
   column-gap: 16.67px;
+
 `;
 const Author = styled.p`
     font-size: 12px;
@@ -74,4 +93,11 @@ line-height: 22px;
 font-weight: ${StylesTheme.fontWeigths.mediumWeigth};
 color:${StylesTheme.colors.white};
 margin-top: 8px;
+
+@media only screen and (min-width: 768px) {
+  font-size: 18px;
+line-height: 28px;
+
+}
+
 `
