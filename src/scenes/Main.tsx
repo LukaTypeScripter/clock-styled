@@ -2,22 +2,27 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { StylesTheme } from "../components/styled";
 import arrowDown from '../images/desktop/icon-arrow-down.svg'
-
+import LocationProps from '../components/GlobalInterface'
 interface Props {
     showTimeZone: boolean
   }
   interface props {
     setShowThimeZone:React.Dispatch<React.SetStateAction<boolean>>,
     showTimeZone:boolean
+    geoLocationData:LocationProps | null
   }
 
-export default function Main({setShowThimeZone,showTimeZone}:props) {
+  
+export default function Main({setShowThimeZone,showTimeZone,geoLocationData}:props) {
 
   const handleShow = (e:React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 e.preventDefault()
 setShowThimeZone(!showTimeZone)
   }
-  
+  if (!geoLocationData) {
+    return <div>Loading...</div>;
+  }
+
   
     return (
         <>
