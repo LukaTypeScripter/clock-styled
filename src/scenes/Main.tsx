@@ -19,9 +19,9 @@ export default function Main({setShowThimeZone,showTimeZone,geoLocationData}:pro
 e.preventDefault()
 setShowThimeZone(!showTimeZone)
   }
-  if (!geoLocationData) {
-    return <div>Loading...</div>;
-  }
+//   if (!geoLocationData) {
+//     return <div>Loading...</div>;
+//   }
 
   
     return (
@@ -54,7 +54,7 @@ setShowThimeZone(!showTimeZone)
     <ShowCont>
     <InsideCont>
         {/**curent timzezone */}
-        
+       <Wrapper>
     <CurrentTimezone>
     <CurrentStyles>CURRENT TIMEZONE</CurrentStyles>
     <CurrentBoldStyles>Europe/London</CurrentBoldStyles>
@@ -66,8 +66,9 @@ setShowThimeZone(!showTimeZone)
     <CurrentStyles>CURRENT TIMEZONE</CurrentStyles>
     <CurrentBoldStyles>295</CurrentBoldStyles>
     </CurrentTimezone>
-
+    </Wrapper> 
   {/**day of the week*/}
+  <Wrapper2> 
   <CurrentTimezone>
     <CurrentStyles>CURRENT TIMEZONE</CurrentStyles>
     <CurrentBoldStyles>5</CurrentBoldStyles>
@@ -79,7 +80,7 @@ setShowThimeZone(!showTimeZone)
     <CurrentStyles>CURRENT TIMEZONE</CurrentStyles>
     <CurrentBoldStyles>42</CurrentBoldStyles>
     </CurrentTimezone>
-
+    </Wrapper2> 
     </InsideCont>
     </ShowCont>
     )}
@@ -277,7 +278,7 @@ const InsideCont = styled.div`
     @media only screen and (min-width: 1440px) {
         flex-direction: unset;
         flex-wrap:wrap;
-        width:500px;
+       
         gap: 40px;
         margin-top: 119px;
         margin-left: 64px;
@@ -327,5 +328,19 @@ line-height: 68px;
 @media only screen and (min-width: 768px) {
     font-size: 40px;
 line-height: 48px;
+}
+`
+const Wrapper = styled.div`
+    @media only screen and (min-width: 1440px) {
+  max-width: 250px;
+  position: relative;
+  right: 200px;
+}
+`
+const Wrapper2 = styled.div`
+    @media only screen and (min-width: 1440px) {
+  max-width: 250px;
+  position: relative;
+  right: 30px;
 }
 `
